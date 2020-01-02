@@ -10,19 +10,22 @@ body{
     grid-template-columns: 0.3fr 0.4fr 0.3fr;
 }
 
-.box {
-    border: 1px solid red;
-    background: yellow;
-}
 
 .navbar {
-    background: yellow;
-    text-transform: uppercase;
-    
     grid-column: 1/4;
     grid-row: 1/2;
+    background: yellow;
+    text-transform: uppercase;
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
-   
-    align-items: center;
+    list-style-type: none;
+}
+
+header {
+    font-size: 3vw;
+}
+
+.blogPost{
+    border: 1px solid red;
 }
