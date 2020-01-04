@@ -46,8 +46,8 @@ header {
 }
     
 .post img {
-    width: 50vh;
-    height: 50vh;
+    width: 25em;
+    height: 25em;
 }
 
 .post button {
@@ -63,6 +63,7 @@ header {
 }
 
 .post p {
-    font-size: 2em;
+    margin: 1em;
+    font-size: 1.5em;
     text-align: justify;
 }
