@@ -1,6 +1,7 @@
 body{
     text-align: center;
     font-family: 'Open Sans', Arial;
+    background-color: pink
 }
 
 .container{
@@ -14,11 +15,12 @@ body{
 
 header {
     grid-column: 1/4;
+    font-size: 3vw;
 }
 .navbar {
     grid-column: 1/4;
     grid-row: 2/4;
-    background: yellow;
+    background: white;
     text-transform: uppercase;
     justify-content: space-between;
     display: flex;
@@ -26,23 +28,41 @@ header {
     list-style-type: none;
 }
 
-header {
-    font-size: 3vw;
-}
-
 .blogPosts{
     grid-column: 1/4;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
+    row-gap: 2vw;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 1px solid red;
 }
 
 .post {
-    border: 1px solid orange;
+    border: 5px solid gray;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: white;
 }
     
 .post img {
+    width: 50vh;
+    height: 50vh;
+}
 
+.post button {
+    border: none;
+    border-radius: 10px;
+    box-sizing: content-box;
+    color: white;
+    text-align: center;
+    background-color: green;
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+}
+
+.post p {
+    font-size: 2em;
+    text-align: justify;
 }
