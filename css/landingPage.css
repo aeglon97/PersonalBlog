@@ -1,14 +1,18 @@
-body{
+html, body{
     text-align: center;
     font-family: 'Open Sans', Arial;
-    background-color: #e9b2bc;
+    /* background-color: #FFC2D7; */
+    /* background-color: ##2f4149 */
+    background-color: #fadadd;
+    margin: 0;
+    padding: 0;
 }
 
 .container{
     grid-template-columns: 0.3fr 0.4fr 0.3fr;
     display: grid;
     column-gap: 2vw;
-    row-gap: 2vw;
+    /* row-gap: 2vw; */
     text-align: center;
     width: 100%;
 }
@@ -17,6 +21,10 @@ header {
     grid-column: 1/4;
     font-size: 60px;
     font-weight: 100px;
+    /* color: #FF66E5; */
+    /* color: #fc03a5 */
+    color: #FF6CC1;
+    background: #fff;
 }
 ul {
     grid-column: 1/4;
@@ -27,6 +35,7 @@ ul {
     flex-direction: row;
 
     background: #2f4149;
+    /* background: #6b6e6f ; */
     text-transform: uppercase;
     /* justify-content: space-between; */
     list-style-type: none;
@@ -46,10 +55,11 @@ li {
 
 li a {
     display: block;
+    color: #FF6CC1;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
 }
 
 li a:hover {
@@ -73,11 +83,15 @@ li:last-child {
 }
 
 .post {
-    border: 5px solid gray;
+    border: 5px solid #6b6e6f ;
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 10px;
     background-color: white;
+}
+
+h1 {
+    color: #FF6CC1;
 }
     
 .post img {
@@ -86,14 +100,20 @@ li:last-child {
     height: 25em; */
 }
 
+.active {
+    color: #41C1CC;
+}
 button {
     border: none;
     border-radius: 10px;
     box-sizing: content-box;
-    color: white;
+    color: #FF6CC1;
     text-align: center;
     font-size: 20px;
-    background-color: #21bf73;
+    background-color: #fff;
+    /* background-color: #21bf73; */
+    /* background-color: #FF6CC1; */
+    border: 2px #FF6CC1 solid;
     width: 25%;
     height: 30px;
     margin: 10px;
@@ -113,4 +133,8 @@ button:focus{
    line-height: 2em;
 }
 
+footer {
+    background-color: #6b6e6f;
+    margin: 0;
+}
 /* for small devices, make it so that each article takes up the whole screen */
