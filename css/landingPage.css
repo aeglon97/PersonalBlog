@@ -1,7 +1,7 @@
 body{
     text-align: center;
     font-family: 'Open Sans', Arial;
-    background-color: pink
+    background-color: #e9b2bc;
 }
 
 .container{
@@ -9,23 +9,56 @@ body{
     display: grid;
     column-gap: 2vw;
     row-gap: 2vw;
-    width: 75vw;
-    margin: auto;
+    text-align: center;
+    width: 100%;
 }
 
 header {
     grid-column: 1/4;
-    font-size: 3vw;
+    font-size: 60px;
+    font-weight: 100px;
 }
-.navbar {
+ul {
     grid-column: 1/4;
     grid-row: 2/4;
-    background: white;
-    text-transform: uppercase;
-    justify-content: space-between;
-    display: flex;
+    /* max-width: 75%; */
+
+    display: block;
     flex-direction: row;
+
+    background: #2f4149;
+    text-transform: uppercase;
+    /* justify-content: space-between; */
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+    /* position: relative; */
+    border-right: 1px solid #eeee;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li:last-child {
+    border-right: none;
+    float:right;
 }
 
 .blogPosts{
@@ -34,7 +67,9 @@ header {
     display: flex;
     row-gap: 2vw;
     flex-wrap: wrap;
+    margin: 0 auto;
     flex-direction: column;
+    max-width: 60%;  
 }
 
 .post {
@@ -46,24 +81,36 @@ header {
 }
     
 .post img {
-    width: 25em;
-    height: 25em;
+    max-width: 80%;
+    /* width: 45em;
+    height: 25em; */
 }
 
-.post button {
+button {
     border: none;
     border-radius: 10px;
     box-sizing: content-box;
     color: white;
     text-align: center;
-    background-color: green;
-    width: 50%;
-    height: 50%;
+    font-size: 20px;
+    background-color: #21bf73;
+    width: 25%;
+    height: 30px;
     margin: 10px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+button:focus{
+    outline: 0;
 }
 
 .post p {
     margin: 1em;
     font-size: 1.5em;
     text-align: justify;
+   line-height: 2em;
 }
+
+/* for small devices, make it so that each article takes up the whole screen */
