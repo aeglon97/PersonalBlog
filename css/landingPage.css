@@ -21,6 +21,7 @@ header {
     grid-column: 1/4;
     font-size: 60px;
     font-weight: 100px;
+    padding: 30px;
     /* color: #FF66E5; */
     /* color: #fc03a5 */
     color: #FF6CC1;
@@ -41,6 +42,7 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 40px;
     overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
@@ -134,7 +136,9 @@ button:focus{
 }
 
 footer {
-    background-color: #6b6e6f;
+    padding: 30px;
+    background-color: #2f4149;
     margin: 0;
+    color: #41C1CC;
 }
 /* for small devices, make it so that each article takes up the whole screen */
