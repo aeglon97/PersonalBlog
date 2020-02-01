@@ -93,11 +93,33 @@ li:last-child {
     border-bottom: none;
 }
 
+h1 {
+    font-size: 40px;
+    color: #FF6CC1;
+}
+
+h1:hover {
+    opacity: 0.8;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 25px;
+    color: gray;
+}
+
+.author_name {
+    text-decoration: underline;
+}
+
+/* social sharing */
 .social-sharing{
     grid-column: 2/4;
     grid-row: 6/7;
     margin: 0 auto;
     background-color: black;
+    border-left: 4px solid #6b6e6f;
+    
 }
 
 .social-sharing_flex{

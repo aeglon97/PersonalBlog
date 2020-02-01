@@ -93,9 +93,7 @@ li:last-child {
 /* blog grid */
 .blogPosts{
     grid-column: 2/4;
-    padding: 2rem;
     display: flex;
-    row-gap: 2vw;
     flex-wrap: wrap;
     /* margin: 0 auto; */
     flex-direction: column;
@@ -123,6 +121,16 @@ h1 a{
 
 h1 a:hover{
     opacity: 0.8;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 25px;
+    color: #6b6e6f;
+}
+
+.author_name {
+    text-decoration: underline;
 }
     
 .post img {
