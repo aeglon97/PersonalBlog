@@ -3,13 +3,23 @@ html, body{
     font-family: 'Open Sans', Arial;
     background-color: #fadadd;
     margin: 0;
-    padding: 0;
+}
+
+/* CSS Grid layout */
+.container{
+    grid-template-columns: 0.10fr .40fr .40fr .10fr;
+    display: grid;
+    column-gap: 2vw;
+    /* row-gap: 2vw; */
+    text-align: center;
+    width: 100%;
 }
 
 /* header */
 header {
     display: block;
     grid-column: 1/6;
+    grid-row: 1/2;
     padding: 100px;
     background:url(../img/paint.jpg);
     background-size: cover;
@@ -26,26 +36,17 @@ header h1 {
     margin: 0 auto;
 }
 
-h1 {
+/* h1 {
     font-size: 40px;
     color: #FF6CC1;
-}
+} */
 
 /* navbar */
-
-.container{
-    grid-template-columns: 0.10fr .40fr .40fr .10fr;
-    display: grid;
-    column-gap: 2vw;
-    /* row-gap: 2vw; */
-    text-align: center;
-    width: 100%;
-}
-
-ul {
+.navbar {
     grid-column: 1/6;
     grid-row: 2/4;
 
+    /* display block with flex-direction allows 'All Articles' to be placed to the right */
     display: block;
     flex-direction: row;
 
@@ -58,15 +59,15 @@ ul {
     overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 0;  
 }
 
-li {
+.navbar li {
     float: left;
     border-right: 1px solid #eeee;
 }
 
-li a {
+.navbar li a {
     display: block;
     color: #FF6CC1;
     text-align: center;
@@ -75,11 +76,15 @@ li a {
     /* color: #fff; */
 }
 
-li a:hover {
+#active {
+    color: #41C1CC;
+}
+
+.navbar li a:hover {
     background-color: #111;
 }
 
-li:last-child {
+.navbar li:last-child {
     border-right: none;
     float:right;
 }
@@ -94,16 +99,17 @@ li:last-child {
 .blogPosts{
     grid-column: 2/4;
     display: flex;
-    flex-wrap: wrap;
-    /* margin: 0 auto; */
     flex-direction: column;
-    /* max-width: 75%;   */
+   
 }
 
 .post {
+    grid-column: 2/4;
+    grid-row: 4/6;
+
     border: 4px solid #6b6e6f ;
     margin-bottom: 2rem;
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 10px;
     box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);
     background-color: white;
@@ -139,9 +145,9 @@ h2 {
     height: 25em; */
 }
 
-.active {
-    color: #41C1CC;
-}
+
+
+
 
 button {
     border: none;
@@ -156,7 +162,7 @@ button {
     border: 2px #FF6CC1 solid;
     width: 25%;
     height: 30px;
-    margin: 10px;
+    margin: 1.5%;
 }
 
 button:hover{
@@ -168,10 +174,11 @@ button:focus{
 }
 
 .post p {
-    margin: 1em;
+    margin: 2em;    
+    margin-bottom: 0;
     font-size: 1.5em;
-    text-align: justify;
-   line-height: 2em;
+    text-align: left;
+    line-height: 2em;
 }
 
 footer {
@@ -180,4 +187,10 @@ footer {
     margin: 0;
     color: #41C1CC;
 }
-/* for small devices, make it so that each article takes up the whole screen */
+/* button */
+
+@media only screen and (max-width: 768px){
+    button {
+        font-size: 99%;
+    }
+}
