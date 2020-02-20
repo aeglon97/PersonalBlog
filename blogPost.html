@@ -24,10 +24,12 @@
          <article class="post">
             <h1 class="article-title">Abstract Data Types: Stacks and Queues</h1>
             <hr>
-            <h2 class = "post__author-name">by Marco Angelo</h2>
+            <h2 class = "post__author-name">by <u><em>Marco Angelo</em></u></h2>
             <img src="./img/stq.png"/ alt = "a list of nodes with arrows coming from the top and bottom">
             <p><span class="dropcap">S</span>tacks and queues are two types of abstract data types that you can use to store and retrieve data in different ways.</p>
-            <p>Stacks have a last-in-first-out mechanism (LIFO), while Queues have a first-in-first-out mechanism (FIFO). But what does this mean?</p>
+
+            <p><strong>Stacks</strong> have a last-in-first-out mechanism (LIFO), while <strong>Queues</strong>
+               have a first-in-first-out mechanism (FIFO). But what does this mean?</p>
 
             <h1 class="post__header">Stacks (LIFO)</h1>
 
@@ -36,46 +38,70 @@
             <p>
                 Stacks can be compared to piles of plates.
                 When you have a whole pile of plates, you can only add a new plate on top of the pile, aka the top of the stack.
-                The last plate you put on top is also the same plate that first gets out, hence the LIFO (last-in-first-out) mechanism.
+                The last plate you put on top is also the same plate that first gets out, hence the
+                <strong>LIFO (last-in-first-out)</strong> mechanism.
             </p>
 
             <p>
-                The 2 most important methods in a stack are push() and pop().
-                Push() adds a new item to the top of the stack, and pop() removes the item at the top of the stack.
+                The 2 most important methods in a stack are <strong><em>push()</em></strong>
+                and <strong><em>pop()</em></strong>. <em>Push()</em> adds a new item to the top of the stack, and
+                <em>pop()</em> removes the item at the top of the stack.
             </p>
 
-            <img id = "push_pop" src = "./img/push_pop.jpg" alt="a diagram displaying the difference between push() and pop()"/>
+            <figure>
+              <img id = "push_pop" src = "./img/push_pop.jpg" alt="a diagram displaying the difference between push() and pop()"/>
+              <figcaption><em>
+                You <strong>pop from</strong> the stack, and <strong>push to</strong> the stack.
+              </em></figcaption>
+            </figure>
 
             <p>
-                Just like a stack of plates, you can only add — push() — and remove — pop() — from the top of the stack.
+                Just like a stack of plates, you can only <strong>add — <em>push()</em></strong> —
+                and <strong>remove — <em>pop()</em></strong> — from the top of the stack.
                 Aka, adding or removing from the “last” plate.
             </p>
 
             <h2 class="post__subheader">Stack Implementation</h2>
 
             <p>
-                All stacks require only one pointer looking to the end of the stack. Whenever a push() or pop() operation is
-                performed,the pointer should always increment/decrement to the “top” of the stack.
+                All stacks require only <strong>one pointer</strong> looking to the end of the stack. Whenever a <em>push()</em>
+                or <em>pop()</em> operation is performed,the pointer should always increment/decrement to the “top” of the stack.
                 A common data structure used to implement stack is an array.
             </p>
 
-            <p>For push(), the stack pointer will always increment to the index of the new element being “pushed.”</p>
+            <p>For <em>push()</em>, the stack pointer will always <strong>increment</strong> to the index of the new element being “pushed.”</p>
 
-            <p>For pop(), the stack pointer will always decrement to the index of the element before the element being “popped.”</p>
+            <p>For <em>pop()</em>, the stack pointer will always <strong>decrement</strong> to the index of the element before the element being “popped.”</p>
 
-            <img class="post-img" src = "./img/push_stack_pointer.jpg" alt = "pushing onto a stack with the stack pointer"/>
-            <img class="post-img" src = "./img/pop_stack_pointer.jpg" alt = "popping onto a stack with the stack pointer"/>
+            <figure>
+              <img class="post-img" src = "./img/push_stack_pointer.jpg" alt = "pushing onto a stack with the stack pointer"/>
+              <figcaption>
+                <em>
+                  stack_pointer increments by 1 when “pushing” onto the stack
+                </em>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img class="post-img" src = "./img/pop_stack_pointer.jpg" alt = "popping onto a stack with the stack pointer"/>
+              <figcaption>
+                <em>
+                  stack_pointer decrements by 1 when “popping” from the stack
+                </em>
+              </figcaption>
+            </figure>
 
             <p>
-                Note that pop() doesn’t take any parameters, but push() does. This is because pop() removes the last element no matter what,
-                while push() adds an element, which means you’ll need to specify an element to add.
+                Note that <em>pop()</em> doesn’t take any parameters, but <em>push()</em> does. This is because <em>pop()</em>
+                removes the last element no matter what, while <em>push()</em> adds an element,
+                which means you’ll need to specify an element to add.
             </p>
 
             <p>When dealing with stacks in code, there are some considerations to take:</p>
 
             <ul>
-                <li>underflow: an exception will be thrown if popping from an empty stack.</li>
-                <li>overflow: account for resizing the stack implementation when pushing to a full array.</li>
+                <li><strong>underflow</strong>: an exception will be thrown if popping from an empty stack.</li>
+                <li><strong>overflow</strong>: account for resizing the stack implementation when pushing to a full array.</li>
             </ul>
 
             <p>
@@ -95,22 +121,23 @@
             </p>
 
             <p>
-                The 2 most important functions in a queue are dequeue() and enqueue(). The function
-                dequeue() removes the first element of a queue, and enqueue() “pushes” an element to the end of the queue.
-                This makes sense in the context of a line of people — whoever is first in line dequeues (gets removed),
-                and whoever joins the line enqueues (gets added to the back of the line).
+                The 2 most important functions in a queue are <strong><em>dequeue()</em></strong> and
+                <strong><em>enqueue()</em></strong>. The function <em>dequeue()</em> removes the first element of a queue,
+                <em>and enqueue()</em> “pushes” an element to the end of the queue. This makes sense in the context of a line of
+                people — whoever is first in line <em>dequeues</em> (gets removed), and whoever joins the line
+                <em>enqueues</em> (gets added to the back of the line).
             </p>
 
             <img src="./img/queue_dequeue.jpg" alt = "dequeue() from the front, enqueue() onto the back"/>
 
             <p>
-                The first element you enqueue() is the first element to be removed, hence the FIFO (first-in-first-out) mechanism.
+                The first element you <em>enqueue()</em> is the first element to be removed, hence the <strong>FIFO (first-in-first-out)</strong> mechanism.
             </p>
 
             <p>
-                Disclaimer: dequeue() can sometimes be referred to as pop(),
-                but for the sake of consistency and to avoid confusion with the pop() function for stacks,
-                I will refer to it as dequeue().
+                <strong>Disclaimer</strong>: <em>dequeue()</em> can sometimes be referred to as <em>pop()</em>,
+                but for the sake of consistency and to avoid confusion with the <em>pop()</em> function for stacks,
+                I will refer to it as <em>dequeue()</em>.
             </p>
 
             <h2 class="post__subheader">Queue Implementation</h2>
@@ -118,37 +145,46 @@
             <p>
                 A common implementation of a queue is with Doubly Linked Lists,
                 so we will use that data structure to analyze the handling of pointers.
-                Each element of the queue will be referred to as a Node.
+                Each element of the queue will be referred to as a <strong>Node</strong>.
             </p>
 
             <p>
                 Just like stacks, queues in a Doubly Linked List contain a pointer referring to the last item.
                 The only difference is that queues require 2 pointers looking to the beginning and end of the queue
-                to take advantage of the dequeue() and enqueue() functions.
+                to take advantage of the <em>dequeue()</em> and <em>enqueue()</em> functions.
             </p>
 
             <img src="./img/pointers.jpg">
 
-            <p>Once you enqueue() a node to the queue, the back_pointer increments by 1.</p>
+            <p>Once you <strong><em>enqueue()</em></strong> a node to the queue, the back_pointer increments by 1.</p>
 
             <img src="./img/enqueue.jpg"/>
 
             <p>
-                However, dequeue() is a lot trickier than enqueue(). This is because once you remove from the front of the queue,
+                However, <em>dequeue()</em> is a lot trickier than <em>enqueue()</em>. This is because once you remove from the front of the queue,
                 you’d have to deallocate the memory from the previous node and make the pointers account for the new size of the queue.
             </p>
 
-            <p>So once you dequeue() an element from the front of the queue, the front_pointer moves to point to the
+            <p>
+                So once you <strong><em>dequeue()</em></strong> an element from the front of the queue, the front_pointer moves to point to the
                 next node while retaining the same location in the Linked List, and you deallocate the space for the first node.
                 In effect, the back_pointer decrements by 1 to account for the new size.
             </p>
 
-            <img src="./img/dequeue.jpg"/>
+            <figure>
+              <img src="./img/dequeue.jpg"/>
+              <figcaption>
+                <em>
+                  back_pointer decrements by 1 to account for the new size (n-1 = 7), front_pointer stays in the same
+                  position but points to the next element after the front is removed
+                </em>
+              </figcaption>
+            </figure>
 
             <p>
-                It is easy to think of a queue as a line of people. To enqueue() means that more people are falling
-                into the back of the line,and dequeue() means that the person who got there first, no matter who they are,
-                will be let through first.No matter how large the queue is, the person who arrives first will always be the
+                It is easy to think of a queue as a line of people. To <em>enqueue()</em> means that more people are falling
+                into the back of the line, and <em>dequeue()</em> means that the person who got there first, no matter who they are,
+                will be let through first. No matter how large the queue is, the person who arrives first will always be the
                 first to leave. Queues can also be thought of as a “first come, first serve” type of data structure, where
                 deletion and insertion happen on different ends.
             </p>
@@ -160,7 +196,7 @@
             <ul>
                 <li>Stacks have a LIFO(last-in-first-out) structure, where deletion and insertion happen at the same end.</li>
                 <li>Stacks have 1 pointer looking to the end (“top”) of the stack.</li>
-                <li>Stacks use pop() and push() functions — removing and adding elements to the top of the stack.</li>
+                <li>Stacks use <em>pop()</em> and <em>push()</em> functions — removing and adding elements to the top of the stack.</li>
             </ul>
 
             <h2 class="post__subheader">Queues</h2>
@@ -168,7 +204,7 @@
             <ul class="post-ul">
                 <li>Queues have a FIFO (first-in-first-out) structure, where deletion and insertion happen at opposite ends.</li>
                 <li>Queues have 2 pointers looking to the front and back of the queue.</li>
-                <li>Queues use enqueue() and dequeue() functions — adding to the end of the queue and removing from the front of the queue.</li>
+                <li>Queues use <em>enqueue()</em> and <em>dequeue()</em> functions — adding to the end of the queue and removing from the front of the queue.</li>
             </ul>
 
             <p>This article was taken from my
