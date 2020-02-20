@@ -1,0 +1,79 @@
+/* contents of posts across all pages */
+.post {
+  background-color: white;
+  border: 4px solid #6b6e6f ;
+  border-radius: 10px;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
+  grid-column: 2/4;
+  grid-row: 4/6;
+  margin-bottom: 2rem;
+}
+
+.post img {
+  max-width: 80%;
+}
+
+.post__author-name {
+  color: #6b6e6f;
+  font-size: 25px;
+}
+
+.article-title {
+  color: #FF6CC1;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.article-title:hover {
+  opacity: 0.8;
+}
+
+h2 {
+  color: #6b6e6f;
+  font-size: 25px;
+}
+
+button {
+  background-color: #fff;
+  border: 2px #FF6CC1 solid;
+  border-radius: 10px;
+  box-sizing: content-box;
+
+  color: #FF6CC1;
+  font-size: 20px;
+  height: 30px;
+  margin: 1.5%;
+  text-align: center;
+  width: 25%;
+}
+
+button:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.post p, .post ul{
+  font-size: 1.5em;
+  line-height: 2em;
+  list-style-position: inside;
+  margin: 2em;
+  margin: 0;
+  padding: 1.5rem;
+  text-align: justify;
+}
+
+.post__header {
+  font-size: 40px;
+}
+
+.post__subheader {
+  color: #6b6e6f;
+  font-size: 30px;
+}
+
+
+@media only screen and (max-width: 1025px) {
+  .post {
+    grid-column: 1/6;
+  }
+}

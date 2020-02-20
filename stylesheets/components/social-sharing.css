@@ -1,0 +1,32 @@
+.social-sharing{
+  background-color: black;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: -3px;
+  width: 100%;
+}
+
+.social-sharing p, h2 {
+  color: white;
+  /* font-size: 30px; */
+  padding: 20px;
+  text-align: center;
+}
+
+.social-sharing__icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-sharing__copyright {
+  color: white;
+  font-size: 10px;
+}
+.icon {
+  margin: 0 auto;
+  width: 7%;
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

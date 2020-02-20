@@ -1,0 +1,16 @@
+html, body {
+  background-color: #fadadd;
+  text-align: center;
+  font-family: 'Open Sans', Arial;
+  margin: 0;
+}
+
+hr {
+  width: 80%;
+}
+
+.dropcap {
+  float: left;
+  font-size: 400%;
+  margin: -13px 7px -13px 0;
+}

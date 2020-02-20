@@ -1,0 +1,21 @@
+header {
+  background:url(../../img/paint.jpg);
+  background-position: center;
+  background-size: cover;
+
+  display: block;
+  grid-column: 1/6;
+  grid-row: 1/2;
+  padding: 100px;
+
+}
+
+.header-name {
+  background-color: white;
+  border-radius: 20px;
+  color:  #FF6CC1;
+  font-size: 50px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
