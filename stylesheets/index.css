@@ -1,2 +1,2 @@
-@import "page-setup.css";
-@import "home-setup.css";
+@import "./setups/page-setup.css";
+@import "./setups/home-setup.css";
